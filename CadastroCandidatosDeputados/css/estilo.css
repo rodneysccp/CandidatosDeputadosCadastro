@@ -1,0 +1,28 @@
+.header{
+	background-color: #222222;
+}
+
+.footer {
+  	position: fixed;
+	bottom: 0;
+    width: 100%;
+	text-align: center;
+	background-color: #222222;
+	padding: 10px;
+}
+
+.footer #integrante {
+    color: white;
+    text-decoration: none;
+    font-family: Century Gothic;
+    font-size: 15px;
+}
+
+body > .container {
+  	padding: 60px 15px 0;
+}
+
+.footer > .container {
+  	padding-right: 15px;
+  	padding-left: 15px;
+}
