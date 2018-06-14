@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Bootstrap</title>
+	<title>Cadastro de Candidatos</title>
 	
 	<!-- Required meta tags-->
 	<meta charset="UTF-8">
@@ -12,78 +12,145 @@
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
+	<!-- Importar backend -->
+	
 </head>
 <body>
 	<!-- Bootstrap Javascript JQuery -->
 	<script src="js/jquery.js"></script>	  
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/app.js"></script>
-
+	
 	<div class = "container-fluid">
-		<!-- Body -->
-		<div class = "row">
-
-			<!-- Vazio -->
+		
+		<!--Body-->
+		<div class = "row body">
+			
+			<!--Nome Completo-->
 			<div class="col-md-2"></div>
-
-			<!-- Corpo -->
 			<div class = "col-md-8 col-sm-12 col-xs-12">
-				<table id = "tabela"  class = "table table-active">
-					<tr>
-						<td>
-							<input type="text" placeholder="Nome" name="nome" id="nome">
-							<select id = "sexo">
-								<option value = "Saída">M</option>
-								<option value = "Entrada">F</option>
-							</select>
-							<input type="date" id="dataNascimento">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" placeholder="Rua" name="rua" id="rua">
-							<input type="text" placeholder="Número" name="numero" id="numero">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<select id = "cidade">
-								<option value = "Campinas">Campinas</option>
-							</select>
-							<select id = "estado">
-								<option value = "SP">SP</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" placeholder="CPF" name="cpf" id="cpf">
-							<input type="text" placeholder="Conjus" name="conjus" id="conjus">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" placeholder="E-mail" name="email" id="email">
-							<input type="text" placeholder="Senha" name="senha" id="senha">
-
-							<input type="text" placeholder="Confirmar Senha" name="confirmarSenha" id="confirmarSenha">
-						</td>
-					</tr>
-				</table>
+				<div class="form-group">
+					<label for="nome">Nome completo</label>
+					<input type="text" class="form-control" id="nome" name="nome">
+				</div>
 			</div>
-			<!-- Vazio -->
 			<div class="col-md-2"></div>
+
+			<!--Sexo e Data de Nascimento-->
+			<div class="col-md-2"></div>
+			<div class = "col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="sexo">Sexo</label>
+					<select class="custom-select" id="sexo">
+						<option disabled selected>Selecione uma opção...</option>
+						<option value="M">M</option>
+						<option value="F">F</option>
+						<option value="outros">Outros</option>
+					</select>
+				</div>
+			</div>
+			<div class = "col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="dataNascimento">Data Nascimento</label>
+					<input type="date" class="form-control" id="dataNascimento" name="dataNascimento">
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+
+			<!--Email-->
+			<div class="col-md-2"></div>
+			<div class = "col-md-8 col-sm-12 col-xs-12">
+				<label for="email">Email</label>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">@</span>
+					</div>
+					<input type="email" class="form-control" id="email" name="email"
+					placeholder="email@exemplo.com">
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+
+			<!--CPF e Conjus-->
+			<div class="col-md-2"></div>
+			<div class = "col-md-4 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label for="cpf">CPF</label>
+					<input type="text" class="form-control" id="cpf" name="cpf" placeholder="___.___.___-__">
+				</div>
+			</div>
+			<div class = "col-md-4 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label for="cpf">Conjus</label>
+					<input type="text" class="form-control" id="conjus" name="conjus">
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+
+			<!--Rua-->
+			<div class="col-md-2"></div>
+			<div class = "col-md-8 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label for="rua">Rua</label>
+					<input type="email" class="form-control" id="rua" name="rua">
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+
+			<!--Cidade e Estado-->
+			<div class="col-md-2"></div>
+			<div class = "col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="cidade">Cidade</label>
+					<select class="custom-select" id="cidade">
+						<option disabled selected>Selecione uma opção...</option>
+					</select>
+				</div>
+			</div>
+			<div class = "col-md-4 col-sm-6 col-xs-12">
+				<div class="form-group">
+					<label for="bandeira-cartao">Estado</label>
+					<select class="custom-select" id="estado">
+						<option disabled selected>Selecione uma opção...</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+
+			<!--Senha e Confirmar senha-->
+			<div class="col-md-2"></div>
+			<div class = "col-md-4 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label for="senha">Senha</label>
+					<input type="password" class="form-control" id="senha" name="senha">
+				</div>
+			</div>
+			<div class = "col-md-4 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label for="confirmarSenha">Confirmar Senha</label>
+					<input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha">
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+
+			<!--Botão confirmar-->
+			<div class="col-md-2"></div>
+			<div class = "col-md-8 col-sm-12 col-xs-12">
+				<button type="submit" class="btn btn-success">
+					Confirmar
+				</button>
+				<div class="col-md-2"></div>
+			</div>
 		</div>
 
 		<!-- Rodapé -->
 		<div class = "row footer">
-			<div class = "col-md-12 col-sm-12 col-xs-12 align-middle">
-				<!-- Licença -->
-				<div class="container">
-					<p id = "integrante">Rodney Magalhães Gonçalves de Oliveira</p>
-				</div>
+			<div class = "col-md-12 col-sm-12 col-xs-12 align-middle">			
+				<p id = "integrante">Rodney Magalhães Gonçalves de Oliveira</p>
 			</div>
 		</div>
 	</div>
+	
 </body>
 </html>
